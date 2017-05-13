@@ -24,6 +24,9 @@ import element from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 Vue.use(element)
 
+import component from './components'
+Vue.component('MyHeader', component.MyHader)
+Vue.component('MyFooter', component.MyFooter)
 // 自定义Directives
 import './directives'
 

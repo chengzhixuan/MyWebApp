@@ -1,0 +1,46 @@
+@charset "utf-8";
+html{
+  width: 100%;
+}
+body, #app {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  margin: 0px;
+  font-size: 0.5rem;
+}
+.iconfont{
+  font-size:0.5rem !important;
+}
+
+body,h1,h2,h3,h4,h5,h6,div,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}
+body{overflow:hidden;height:100%;margin:0 auto;width: 100%}
+html{width: 100%;height: 100%}
+address,cite,dfn,em,var{font-style:normal}
+code,kbd,pre,samp{font-family:courier new,courier,monospace}
+small{font-size:12px}
+ul,ol,li,dl,dt,dd{list-style:none}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+legend{color:#000}
+fieldset,img{border:0}
+button,input,select,textarea{font:12px/1.5 tahoma,arial,sans-serif; vertical-align:middle;cursor:pointer}
+table{border-collapse:collapse;border-spacing:0}
+.clear:after{clear: both;content: '.';display: block;visibility:hidden ;width: 0px;height: 0px;}
+.clear{zoom:1}
+/*a*/
+a{ text-decoration:none; color:#555;}
+
+/*title*/
+h1 { font-size:1rem;}
+h2 { font-size:0.9rem;}
+h3 { font-size:0.8rem;}
+h4 { font-size:0.7rem;}
+h5 { font-size:0.5rem;}
+h6 { font-size:0.3rem;}

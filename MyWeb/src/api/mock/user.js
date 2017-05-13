@@ -4,7 +4,7 @@
 export default [
   {
     url: /\/getuser/,
-    type: '',
+    type: 'get',
     template: {
     }
   }

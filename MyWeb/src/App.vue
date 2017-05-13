@@ -1,23 +1,25 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <MyHeader></MyHeader>
     <router-view></router-view>
+    <MyFooter></MyFooter>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app'
-}
+  export default {
+    name: 'app'
+  }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="less" rel="stylesheet/less">
+  @import "./assets/style/style.css";
+  @import "//at.alicdn.com/t/font_vwg53dl74oadzpvi.css";
+  #app {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 </style>
