@@ -34,9 +34,24 @@
     props: [],
     components: {},
     filters: {},
+    computed () {
+
+    },
+    watch: {
+      '$route': 'pathchange'
+    },
     mounted () {
     },
     methods: {
+      pathchange () {
+        let path = this.$route.fullPath
+        for (let i = 0; i < NAVLI.length; i++) {
+          if (path.split('?')[0] === '/' + NAVLI[i].title) {
+            this.nownav = NAVLI[i].name
+            break
+          }
+        }
+      },
       user () {
         this.nownav = '个人中心'
         this.listhidd()
@@ -61,12 +76,7 @@
     created () {
       this.navlist = NAVLI
       this.nownav = '首页'
-//      api.article.getNav().then(res => {
-//        this.navlist = res.data
-//        this.nownav = res.data[0]
-//      }).catch(err => {
-//        console.log(err)
-//      })
+      this.pathchange()
     }
   }
 </script>
@@ -75,6 +85,8 @@
   header{
     color: #fff;
     font-weight: 400;
+    min-height: 8.2%;
+    position: relative;
     .headertop{
       width: 100%;
       display: flex;
@@ -82,6 +94,9 @@
       background: #0593d3;
       justify-content: space-around;
       padding: 10px 0px;
+      .iconfont{
+        font-size:0.5rem;
+      }
       span{
         display: block;
         text-align: center;

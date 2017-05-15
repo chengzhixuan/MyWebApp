@@ -4,8 +4,12 @@
 import MyHader from './MyHeader.vue'
 import MyFooter from './MyFooter.vue'
 import ArticleList from './articlelist.vue'
+import ArticleContent from './articlecontent.vue'
+import Discussx from './discuss.vue'
 export {
-  ArticleList
+  ArticleList,
+  ArticleContent,
+  Discussx
 }
 export default {
   MyHader,

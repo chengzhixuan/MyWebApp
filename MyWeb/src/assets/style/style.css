@@ -1,8 +1,5 @@
 @charset "utf-8";
-html{
-  width: 100%;
-}
-body, #app {
+html,body, #app {
   height: 100%;
   width: 100%;
   max-width: 100%;
@@ -16,7 +13,7 @@ body, #app {
   font-size: 0.5rem;
 }
 .iconfont{
-  font-size:0.5rem !important;
+  font-size:0.5rem;
 }
 
 body,h1,h2,h3,h4,h5,h6,div,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0}

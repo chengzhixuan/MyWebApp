@@ -3,6 +3,22 @@
  */
 export default [
   {
+    url: /\/getarticleid/,
+    type: 'get',
+    template: {
+      'result': 1,
+      'status': 200,
+      'data': {
+        'title': '@cword(2,5)',
+        'subheader': '@cword(5,10)',
+        'author': '@cword(2,3)',
+        'time': '@datetime("yyyy-MM-dd HH:mm:ss")',
+        'readnum|500-1000': 500,
+        'content': '@cword(300,600)'
+      }
+    }
+  },
+  {
     url: /\/getcourselist/,
     type: 'get',
     template: {
@@ -11,12 +27,15 @@ export default [
       'data|3-6': [
         {
           'label': '@cword(2,5)',
+          'id': 1,
           'children|6-10': [
             {
               'label': '@cword(3,6)',
+              'id': 2,
               'children|1-4': [
                 {
-                  'label': '@cword(3,6)'
+                  'label': '@cword(3,6)',
+                  'id': 3
                 }
               ]
             }
@@ -46,7 +65,9 @@ export default [
           'image': 'http://localhost:8081/static/timg.jpg',
           'content': '@cword(20, 100)',
           'title': '@cword(5, 10)',
-          'subhead': '@cword(5, 10)'
+          'subhead': '@cword(5, 10)',
+          'id|100-200': 1,
+          'colnum': 'course'
         }
       ],
       'status': 200
@@ -62,7 +83,9 @@ export default [
           'image': 'http://localhost:8081/static/timg.jpg',
           'content': '@cword(20, 100)',
           'title': '@cword(5, 10)',
-          'subhead': '@cword(5, 10)'
+          'subhead': '@cword(5, 10)',
+          'id|100-200': 1,
+          'colnum': 'course'
         }
       ],
       'status': 200
@@ -76,9 +99,11 @@ export default [
       'data|1-4': [
         {
           'image': 'http://localhost:8081/static/timg.jpg',
-          'content': '@cword(20, 100)',
+          'content': '@cword(300, 600)',
           'title': '@cword(5, 10)',
-          'subhead': '@cword(5, 10)'
+          'subhead': '@cword(5, 10)',
+          'id|100-200': 1,
+          'colnum': 'course'
         }
       ],
       'status': 200

@@ -2,7 +2,6 @@
   <div id="app">
     <MyHeader></MyHeader>
     <router-view></router-view>
-    <MyFooter></MyFooter>
   </div>
 </template>
 
@@ -14,12 +13,15 @@
 
 <style lang="less" rel="stylesheet/less">
   @import "./assets/style/style.css";
-  @import "//at.alicdn.com/t/font_vwg53dl74oadzpvi.css";
+  @import "//at.alicdn.com/t/font_o25bo659x1lwhfr.css";
   #app {
-    width: 100%;
-    display: flex;
     height: 100%;
-    flex-direction: column;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
     justify-content: flex-start;
   }
 </style>

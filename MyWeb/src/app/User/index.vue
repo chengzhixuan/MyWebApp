@@ -3,7 +3,7 @@
     <div class="hot">
       <h6>热门文章</h6>
       <el-carousel :interval="5000" arrow="always" height="200px" indicator-position="none">
-        <el-carousel-item v-for="item in hotarticle" :key="item">
+        <el-carousel-item v-for="item in hotarticle" :key="item" @click.native="articlecontent(item.id,item.colnum)">
           <img :src="item.image">
           <div>
             <p>{{item.title}}</p>
@@ -15,7 +15,7 @@
     <div class="hot">
       <h6>经典demo</h6>
       <el-carousel :interval="5000" arrow="always" height="200px" indicator-position="none">
-        <el-carousel-item v-for="item in hotdemo" :key="item">
+        <el-carousel-item v-for="item in hotdemo" :key="item" @click.native="articlecontent(item.id,item.colnum)">
           <img :src="item.image">
           <div>
             <p>{{item.title}}</p>
@@ -27,7 +27,7 @@
     <div class="hot">
       <h6>最新发表</h6>
       <el-carousel :interval="5000" arrow="always" height="200px" indicator-position="none">
-        <el-carousel-item v-for="item in newarticle" :key="item">
+        <el-carousel-item v-for="item in newarticle" :key="item" @click.native="articlecontent(item.id,item.colnum)">
           <img :src="item.image">
           <div>
             <p>{{item.title}}</p>
@@ -55,6 +55,9 @@
     mounted () {
     },
     methods: {
+      articlecontent (value, value2) {
+        this.$router.push('/' + value2 + '?id=' + value)
+      },
       gethotdemo () {
         api.article.getHotDemo().then(res => {
           this.hotdemo = res.data

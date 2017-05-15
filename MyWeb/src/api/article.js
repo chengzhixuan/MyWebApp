@@ -3,6 +3,19 @@
  */
 import axios from './axios'
 export default {
+  getArticleId (article) {
+    return new Promise((resolve, reject) => {
+      axios.get('/getarticleid', {
+        params: {
+          'articleid': article
+        }
+      }).then(res => {
+        resolve(res.data)
+      }).catch(err => {
+        reject(err)
+      })
+    })
+  },
   getCourseList (title) {
     return new Promise((resolve, reject) => {
       axios.get('/getcourselist', {
