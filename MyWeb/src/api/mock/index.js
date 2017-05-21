@@ -4,8 +4,9 @@
 import Mock from 'mockjs'
 import user from './user'
 import article from './article'
+import demolist from './demolist'
 Mock.setup({
-  timeout: '200-1000'
+  timeout: '200'
 })
 
 function mocklist (templates) {
@@ -16,4 +17,5 @@ function mocklist (templates) {
 if (process.env.API_MOCK_ON) {
   mocklist(user)
   mocklist(article)
+  mocklist(demolist)
 }

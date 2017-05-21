@@ -46,7 +46,7 @@
       pathchange () {
         let path = this.$route.fullPath
         for (let i = 0; i < NAVLI.length; i++) {
-          if (path.split('?')[0] === '/' + NAVLI[i].title) {
+          if (path.split('?')[0].indexOf('/' + NAVLI[i].title) !== -1) {
             this.nownav = NAVLI[i].name
             break
           }

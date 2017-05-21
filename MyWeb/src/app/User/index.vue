@@ -15,7 +15,7 @@
     <div class="hot">
       <h6>经典demo</h6>
       <el-carousel :interval="5000" arrow="always" height="200px" indicator-position="none">
-        <el-carousel-item v-for="item in hotdemo" :key="item" @click.native="articlecontent(item.id,item.colnum)">
+        <el-carousel-item v-for="item in hotdemo" :key="item" @click.native="todemodetails(item.id,item.colnum)">
           <img :src="item.image">
           <div>
             <p>{{item.title}}</p>
@@ -57,6 +57,9 @@
     methods: {
       articlecontent (value, value2) {
         this.$router.push('/' + value2 + '?id=' + value)
+      },
+      todemodetails (value, value2) {
+        this.$router.push('/' + value2 + '/demodetails/' + value)
       },
       gethotdemo () {
         api.article.getHotDemo().then(res => {
@@ -104,6 +107,10 @@
       h6{
         margin-bottom: 10px;
         font-weight: 500;
+      }
+      .el-carousel{
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.54);
+        border-radius: 5px;
       }
       .el-carousel__item{
         img{

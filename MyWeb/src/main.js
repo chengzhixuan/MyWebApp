@@ -33,6 +33,10 @@ import './directives'
 // 自定义Filters
 import './filters'
 
+// 接入微信
+// import wx from 'weixin-js-sdk'
+// Vue.prototype.wx = wx
+
 // 自定义的全局方法
 import pubmethod from './pubmethod'
 Vue.prototype.pubmethod = pubmethod

@@ -14,7 +14,7 @@
         {{article.content}}
       </div>
     </article>
-    <Discussx></Discussx>
+    <Discussx :reply="article.replytopic"></Discussx>
   </div>
 </template>
 
@@ -29,7 +29,8 @@
         article: {
           time: ''
         },
-        loading: false
+        loading: false,
+        index: 1
       }
     },
     props: [],
@@ -50,6 +51,7 @@
     mounted () {
       let value = this.$route.query.id
       if (value) {
+        this.index = 0
         setTimeout(() => {
           this.$store.dispatch(actionType.ARTICLE_ARTICLEIDS, value)
         }, 1000)
@@ -58,10 +60,15 @@
     methods: {
       getarticle (value) {
         this.loading = true
+        if (this.index === 0) {
+          this.index = 1
+          return
+        }
         api.article.getArticleId(value).then(res => {
           this.article = res.data
           this.loading = false
         }).catch(err => {
+          this.loading = false
           console.log(err)
         })
       }
@@ -74,6 +81,7 @@
 <style lang="less" rel="stylesheet/less" scoped>
   .articlecont{
     width: 100%;
+    overflow: auto;
   }
   .articlecontent{
     display: flex;
@@ -96,6 +104,8 @@
       font-size: 0.25rem;
       text-indent: 0.5rem;
       color: #666;
+      width: 95%;
+      margin: auto;
     }
   }
 </style>

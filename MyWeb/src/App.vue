@@ -13,7 +13,7 @@
 
 <style lang="less" rel="stylesheet/less">
   @import "./assets/style/style.css";
-  @import "//at.alicdn.com/t/font_o25bo659x1lwhfr.css";
+  @import "//at.alicdn.com/t/font_vxkn23csndcdte29.css";
   #app {
     height: 100%;
     overflow: hidden;

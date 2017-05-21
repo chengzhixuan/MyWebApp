@@ -14,7 +14,27 @@ export default [
         'author': '@cword(2,3)',
         'time': '@datetime("yyyy-MM-dd HH:mm:ss")',
         'readnum|500-1000': 500,
-        'content': '@cword(300,600)'
+        'content': '@cword(300,600)',
+        'replytopic|5-10': [
+          {
+            'title': '@cword(5,10)',
+            'image': 'http://localhost:8081/static/timg.jpg',
+            'name': '@cword(2,3)',
+            'createtime': '@datetime("yyyy-MM-dd HH:mm:ss")',
+            'updatetime': '@datetime("yyyy-MM-dd HH:mm:ss")',
+            'content': '@cword(20,60)',
+            'replyid|100-1000': 1,
+            'topicreply|0-3': [
+              {
+                'name': '@cword(2,3)',
+                'topicreplyid|100-1000': 1,
+                'image': 'http://localhost:8081/static/timg.jpg',
+                'createtime': '@datetime("yyyy-MM-dd HH:mm:ss")',
+                'content': '@cword(20,60)'
+              }
+            ]
+          }
+        ]
       }
     }
   },
@@ -85,7 +105,7 @@ export default [
           'title': '@cword(5, 10)',
           'subhead': '@cword(5, 10)',
           'id|100-200': 1,
-          'colnum': 'course'
+          'colnum': 'demolist'
         }
       ],
       'status': 200
