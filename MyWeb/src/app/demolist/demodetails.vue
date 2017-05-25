@@ -19,11 +19,14 @@
         <img :src="item">
       </el-carousel-item>
     </el-carousel>
+    <Discussx :reply="demodetails.demotopic"></Discussx>
+    <ReturnMes></ReturnMes>
   </div>
 </template>
 
 <script>
   import api from '../../api'
+  import {Discussx, ReturnMes} from '../../components'
   export default{
     data () {
       return {
@@ -32,7 +35,7 @@
       }
     },
     props: [],
-    components: {},
+    components: {Discussx, ReturnMes},
     filters: {},
     mounted () {
     },
@@ -56,6 +59,7 @@
     .el-carousel{
       width: 90%;
       margin: auto;
+      margin-top: 10px;
       img{
         width: 100%;
         height: 100%;

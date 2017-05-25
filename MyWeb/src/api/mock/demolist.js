@@ -33,7 +33,27 @@ export default [
         'author': '@cword(2,3)',
         'readnum|100-1000': 1,
         'time': '@datetime("yyyy-MM-dd HH:mm:ss")',
-        'demolistid|100-1000': 1
+        'demolistid|100-1000': 1,
+        'demotopic|5-10': [
+          {
+            'title': '@cword(5,10)',
+            'image': 'http://localhost:8081/static/timg.jpg',
+            'name': '@cword(2,3)',
+            'createtime': '@datetime("yyyy-MM-dd HH:mm:ss")',
+            'updatetime': '@datetime("yyyy-MM-dd HH:mm:ss")',
+            'content': '@cword(20,60)',
+            'replyid|100-1000': 1,
+            'topicreply|0-3': [
+              {
+                'name': '@cword(2,3)',
+                'topicreplyid|100-1000': 1,
+                'image': 'http://localhost:8081/static/timg.jpg',
+                'createtime': '@datetime("yyyy-MM-dd HH:mm:ss")',
+                'content': '@cword(20,60)'
+              }
+            ]
+          }
+        ]
       }
     }
   }

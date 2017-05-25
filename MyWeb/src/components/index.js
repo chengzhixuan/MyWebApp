@@ -6,10 +6,12 @@ import MyFooter from './MyFooter.vue'
 import ArticleList from './articlelist.vue'
 import ArticleContent from './articlecontent.vue'
 import Discussx from './discuss.vue'
+import ReturnMes from './returnmes.vue'
 export {
   ArticleList,
   ArticleContent,
-  Discussx
+  Discussx,
+  ReturnMes
 }
 export default {
   MyHader,
